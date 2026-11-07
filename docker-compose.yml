@@ -1,0 +1,39 @@
+x-server: &server
+  build: .
+  image: ubuntu-ssh
+
+services:
+  server1:
+    <<: *server
+    container_name: server1
+    hostname: server1
+    ports:
+      - "2221:22"
+
+  server2:
+    <<: *server
+    container_name: server2
+    hostname: server2
+    ports:
+      - "2222:22"
+
+  server3:
+    <<: *server
+    container_name: server3
+    hostname: server3
+    ports:
+      - "2223:22"
+
+  server4:
+    <<: *server
+    container_name: server4
+    hostname: server4
+    ports:
+      - "2224:22"
+
+  server5:
+    <<: *server
+    container_name: server5
+    hostname: server5
+    ports:
+      - "2225:22"
